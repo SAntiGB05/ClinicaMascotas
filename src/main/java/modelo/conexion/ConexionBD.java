@@ -1,4 +1,4 @@
-package controlador;
+package modelo.conexion;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -12,7 +12,7 @@ public class ConexionBD {
     private static final String CONTRASENA = "";
 
     // Método para obtener la conexión
-    public static Connection obtenerConexion() {
+    public static Connection getConection() {
         Connection conexion = null;
         try {
             // Cargar el driver de MySQL

@@ -1,11 +1,13 @@
 package controlador;
 
+import modelo.conexion.ConexionBD;
+
 import java.sql.Connection;
 
 public class PruebaConexion {
     public static void main(String[] args) {
         // Obtener la conexión
-        Connection conexion = ConexionBD.obtenerConexion();
+        Connection conexion = ConexionBD.getConection();
 
         // Verificar si la conexión fue exitosa
         if (conexion != null) {

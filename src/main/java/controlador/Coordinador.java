@@ -67,9 +67,14 @@ public class Coordinador {
         miRegistrarMascotasGui.setVisible(true);
     }
 
-    public void RegistrarPersonas(PersonaVo miPersona) {
-        miPersonaDao.registrarPersona(miPersona);
+    public String registrarPersona(PersonaVo miPersona) {
+        return miPersonaDao.registrarPersona(miPersona);
     }
+
+    public Long registrarNacimiento(PersonaVo miPersona) {
+        return miNacimientoDao.registrarNacimiento(miPersona.getNacimiento());
+    }
+
 
     public void RegistrarMascota(MascotaVo miMascota){
         miMascotaDao.RegistrarMascota(miMascota);
